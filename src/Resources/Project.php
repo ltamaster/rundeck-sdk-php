@@ -67,4 +67,10 @@ class Project extends Resource
         $response = $this->client->get('/project/'.$this->name. '/resource/' .$name, $alt);
         return $response;
     }
+    
+    public function resources($alt = "xml")
+    {
+        $response = $this->client->get('/project/'.$this->name. '/resources', $alt);
+        return $response;
+    }
 }
